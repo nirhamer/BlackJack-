@@ -2,6 +2,9 @@ import java.io.Serializable;
 
 public class Card implements Serializable
 {
+	//TODO it would be batter to define suit as an enum a enum could  move the 'suit name' to the Suit enum reducing the size of card
+
+
 	private char suit;
 	private int value;
 
@@ -37,6 +40,7 @@ public class Card implements Serializable
 
 	public String getSuitName() {
 
+		//TODO use switch statement her it will help reducing the code size
 		String suit;
 		
 		if (this.suit == 'H') {
@@ -129,8 +133,9 @@ public class Card implements Serializable
 		
 		return this.value;
 	}
-	
-	
+
+	//TODO methods starting with  compare  might not be the best choice for Java
+	// The common concepts of equivalence means i could probably use isSameSuit or isSameValue rather than compare
 	public boolean compareSuit(Card card){
 		
 		return this.suit == card.getSuitDesignator();

@@ -6,6 +6,8 @@ public class Dealer implements Serializable
 	private Hand hand = new Hand();
 
 	// Determines if dealer has a blackjack
+	//TODO can be written in a shorter more efficient way
+	// return hand.calculateTotal() == 21;
 	public boolean isBlackjack(){
 		if (hand.calculateTotal() == 21){
 			return true;
